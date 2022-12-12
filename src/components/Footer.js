@@ -2,7 +2,8 @@ import React from "react";
 import { GoMarkGithub } from "react-icons/go";
 
 import "./Footer.scss";
-export default function Footer() {
+
+const Footer = () => {
   return (
     <footer className="Footer">
       <p className="built_by">
@@ -17,4 +18,6 @@ export default function Footer() {
       </p>
     </footer>
   );
-}
+};
+
+export default Footer;
