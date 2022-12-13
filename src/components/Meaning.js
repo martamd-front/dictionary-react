@@ -5,12 +5,12 @@ const Meaning = ({ meaning }) => {
   console.log(meaning);
   return (
     <div className="Meaning">
-      <h3>{meaning.partOfSpeech}</h3>
+      <h4>{meaning.partOfSpeech}</h4>
       {meaning.definitions.map(function (definition, index) {
         return (
           <div key={index}>
-            <p>{definition.definition}</p>
             <p>
+              {definition.definition} <br></br>
               <em>{definition.example}</em>
             </p>
           </div>

@@ -6,8 +6,10 @@ const Results = ({ results }) => {
   if (results) {
     return (
       <div className="Results">
-        <h3>{results.word}</h3>
-        <p>{results.phonetic}</p>
+        <div className="box-results">
+          <h3>{results.word}</h3>
+          <p>{results.phonetic}</p>
+        </div>
         {results.meanings.map(function (meaning, index) {
           return (
             <div key={index}>

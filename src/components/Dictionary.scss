@@ -1,5 +1,5 @@
 .App-header {
-  padding: 80px 20px;
+  padding: 60px 20px 80px;
   background: linear-gradient(
     174.2deg,
     rgba(255, 244, 228, 0.07),
@@ -7,6 +7,7 @@
   );
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07), 0 2px 6px 2px rgba(0, 0, 0, 0.03);
   text-align: center;
+  margin-bottom: 30px;
   h1 {
     font-size: 18px;
     font-weight: 800;
@@ -16,12 +17,24 @@
     font-weight: 40px;
     font-weight: 600;
   }
+  input {
+    width: 50%;
+    border-radius: 25px;
+    margin-top: 15px;
+    padding: 15px 20px;
+  }
+  input:focus,
+  input:active {
+    box-shadow: none;
+    outline-offset: 0;
+    border-color: #11b3d7;
+  }
 }
 
-.box-content {
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07), 0 2px 6px 2px rgba(0, 0, 0, 0.03);
-  background-color: white;
-  border-radius: 8px;
+@media (max-width: 650px) {
+  .App-header input {
+    width: 100%;
+  }
 }
 
 .Loading {
