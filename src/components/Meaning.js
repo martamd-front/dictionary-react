@@ -1,8 +1,9 @@
 import React from "react";
+import Example from "./Example";
 import "./Meaning.scss";
+import Synonyms from "./Synonyms";
 
 const Meaning = ({ meaning }) => {
-  console.log(meaning);
   return (
     <div className="Meaning">
       <h4>{meaning.partOfSpeech}</h4>
@@ -10,12 +11,14 @@ const Meaning = ({ meaning }) => {
         return (
           <div key={index}>
             <p>
-              {definition.definition} <br></br>
-              <em>{definition.example}</em>
+              Definition: {definition.definition}
+              <Example example={definition.example} />
             </p>
           </div>
         );
       })}
+
+      <Synonyms synonyms={meaning.synonyms} />
     </div>
   );
 };
