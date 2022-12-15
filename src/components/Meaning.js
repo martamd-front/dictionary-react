@@ -11,7 +11,7 @@ const Meaning = ({ meaning }) => {
         return (
           <div key={index}>
             <p>
-              Definition: {definition.definition}
+              {definition.definition}
               <Example example={definition.example} />
             </p>
           </div>

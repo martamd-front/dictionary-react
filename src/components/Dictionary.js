@@ -4,6 +4,7 @@ import axios from "axios";
 import Results from "./Results";
 import PropagateLoader from "react-spinners/PropagateLoader";
 import Photos from "./Photos";
+import { VscBook } from "react-icons/vsc";
 
 const Dictionary = () => {
   const [keyword, setKeyword] = useState("sunset");
@@ -40,7 +41,10 @@ const Dictionary = () => {
   const form = (
     <header className="App-header">
       <div className="container">
-        <h1>Dictionary project</h1>
+        <h1>
+          <VscBook />
+          Dictionary project
+        </h1>
         <h2>What word do you want to look up?</h2>
         <form onSubmit={handleSubmit}>
           <input type="search" onChange={updateKeyword} />

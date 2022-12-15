@@ -5,14 +5,15 @@
   padding: 20px;
   margin-bottom: 20px;
 }
-
-img {
-  border-radius: 5px;
-  margin-bottom: 30px;
+.photo-col {
+  img {
+    border-radius: 5px;
+    margin-bottom: 30px;
+  }
 }
 
-@media (max-width: 991px) {
-  .img:last-of-type {
+@media (max-width: 767px) {
+  .photo-col:last-of-type {
     display: none;
   }
 }
