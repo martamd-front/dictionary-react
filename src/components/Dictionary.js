@@ -3,18 +3,30 @@ import "./Dictionary.scss";
 import axios from "axios";
 import Results from "./Results";
 import PropagateLoader from "react-spinners/PropagateLoader";
+import Photos from "./Photos";
 
 const Dictionary = () => {
   const [keyword, setKeyword] = useState("sunset");
   const [results, setResults] = useState(null);
+  const [photos, setPhotos] = useState(null);
 
   const showResults = (response) => {
     setResults(response.data[0]);
   };
 
+  const showPhotos = (response) => {
+    setPhotos(response.data.photos);
+  };
+
   const search = () => {
     const apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/${keyword}`;
     axios.get(apiUrl).then(showResults);
+
+    const pexelsApiKey =
+      "563492ad6f91700001000001c3128e23a0f644d09509ca85ba103cc1";
+    const pexelsApiUrl = `https://api.pexels.com/v1/search?query=${keyword}&per_page=9`;
+    const headers = { Authorization: `Bearer ${pexelsApiKey}` };
+    axios.get(pexelsApiUrl, { headers: headers }).then(showPhotos);
   };
 
   const handleSubmit = (event) => {
@@ -43,6 +55,7 @@ const Dictionary = () => {
         {form}
         <div className="container">
           <Results results={results} />
+          <Photos photos={photos} />
         </div>
       </div>
     );
