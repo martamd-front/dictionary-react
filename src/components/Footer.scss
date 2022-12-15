@@ -13,11 +13,11 @@
       color: #11b3d7;
       text-decoration: none;
       margin-right: 10px;
-    }
-    a:hover {
-      color: #11b3d7;
-      text-decoration: none;
-      opacity: 0.8;
+      &:hover {
+        color: #11b3d7;
+        text-decoration: none;
+        opacity: 0.8;
+      }
     }
     .icon {
       position: relative;

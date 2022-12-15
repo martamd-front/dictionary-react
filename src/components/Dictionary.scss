@@ -22,12 +22,12 @@
     border-radius: 25px;
     margin-top: 15px;
     padding: 15px 20px;
-  }
-  input:focus,
-  input:active {
-    box-shadow: none;
-    outline-offset: 0;
-    border-color: #11b3d7;
+    &:focus,
+    &:active {
+      box-shadow: none;
+      outline-offset: 0;
+      border-color: #11b3d7;
+    }
   }
 }
 
