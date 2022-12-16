@@ -47,8 +47,15 @@ const Dictionary = () => {
         </h1>
         <h2>What word do you want to look up?</h2>
         <form onSubmit={handleSubmit}>
-          <input type="search" onChange={updateKeyword} />
+          <input
+            type="search"
+            onChange={updateKeyword}
+            placeholder="Write a word"
+          />
         </form>
+        <p>
+          <small>e.g. sunset, wine, yoga, coding</small>
+        </p>
       </div>
     </header>
   );
