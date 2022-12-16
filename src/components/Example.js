@@ -1,11 +1,12 @@
 import React from "react";
+import "./Example.scss";
 
 const Example = ({ example }) => {
   if (example) {
     return (
       <span className="Example">
         <br></br>
-        <strong>Example</strong>: <em>{example}</em>
+        e.g. <em>{example}</em>
       </span>
     );
   } else {

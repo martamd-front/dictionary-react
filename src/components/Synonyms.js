@@ -2,13 +2,18 @@ import React from "react";
 import "./Synonyms.scss";
 
 const Synonyms = ({ synonyms }) => {
-  if (synonyms) {
+  if (synonyms.length !== 0) {
     return (
-      <ul className="Synonyms">
-        {synonyms.map(function (synonym, index) {
-          return <li key={index}>{synonym}</li>;
-        })}
-      </ul>
+      <div className="Synonyms">
+        <p>
+          <em> Synonyms</em>
+        </p>
+        <ul>
+          {synonyms.map(function (synonym, index) {
+            return <li key={index}>{synonym}</li>;
+          })}
+        </ul>
+      </div>
     );
   } else {
     return null;

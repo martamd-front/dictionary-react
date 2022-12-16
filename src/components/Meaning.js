@@ -2,6 +2,7 @@ import React from "react";
 import Example from "./Example";
 import "./Meaning.scss";
 import Synonyms from "./Synonyms";
+import Antonyms from "./Antonyms";
 
 const Meaning = ({ meaning }) => {
   return (
@@ -10,7 +11,7 @@ const Meaning = ({ meaning }) => {
       {meaning.definitions.map(function (definition, index) {
         return (
           <div key={index}>
-            <p>
+            <p className="definition">
               {definition.definition}
               <Example example={definition.example} />
             </p>
@@ -19,6 +20,7 @@ const Meaning = ({ meaning }) => {
       })}
 
       <Synonyms synonyms={meaning.synonyms} />
+      <Antonyms antonyms={meaning.antonyms} />
     </div>
   );
 };
